@@ -1,5 +1,7 @@
 import React from "react";
 import { Image, StyleSheet, View, Text } from "react-native";
+import PropTypes from "prop-types";
+import { responsiveWidth } from "react-native-responsive-dimensions";
 
 export default function Land({ land }) {
   return (
@@ -13,8 +15,12 @@ export default function Land({ land }) {
   );
 }
 
+Land.propTypes = {
+  land: PropTypes.object.isRequired,
+};
+
 const styles = StyleSheet.create({
   landContainer: {
-    width: 224,
+    width: responsiveWidth(60),
   },
 });
